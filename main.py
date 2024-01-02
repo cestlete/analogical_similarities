@@ -21,7 +21,7 @@ def process_document(txt, doc_name):
         # print('Text: %s.' % txt)
         # triple_list = client.annotate(txt)
         heading = [["NOUN", "VERB/PREP", "NOUN"]]
-        with open(data_path + doc_name + ".OIE", 'w+', encoding="utf8") as resultFile:
+        with open(doc_name + ".OIE", 'w+', encoding="utf8") as resultFile:
             write = csv.writer(resultFile, lineterminator='\n')
             write.writerows(heading)
             for triple in client.annotate(txt):

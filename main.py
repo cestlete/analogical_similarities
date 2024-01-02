@@ -4,9 +4,10 @@
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
-from openie import StanfordOpenIE
-import os
-import csv
+import numpy as np
+import pandas as pd
+from pyopenie import OpenIE5
+import streamlit as st
 
 properties = {
     'openie.affinity_probability_cap': 2 / 3,
